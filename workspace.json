@@ -78,29 +78,63 @@
       "projectType": "application",
       "targets": {
         "build": {
-          "outputs": [
-            "dist/packages"
-          ],
+          "executor": "@nrwl/workspace:run-commands",
+          "outputs": ["dist/packages"],
           "options": {
-            "commands": [],
+            "commands": ["nx run nativescript-indexed-repeater:build.all"],
             "parallel": false
-          },
-          "executor": "@nrwl/workspace:run-commands"
+          }
         },
         "focus": {
-          "outputs": [
-            "dist/packages"
-          ],
+          "outputs": ["dist/packages"],
           "options": {
-            "commands": [
-              "nx g @nativescript/plugin-tools:focus-packages"
-            ],
+            "commands": ["nx g @nativescript/plugin-tools:focus-packages"],
             "parallel": false
           },
           "executor": "@nrwl/workspace:run-commands"
         }
       },
       "sourceRoot": ""
+    },
+    "nativescript-indexed-repeater": {
+      "root": "packages/nativescript-indexed-repeater",
+      "projectType": "library",
+      "sourceRoot": "packages/nativescript-indexed-repeater",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/nativescript-indexed-repeater",
+            "tsConfig": "packages/nativescript-indexed-repeater/tsconfig.json",
+            "packageJson": "packages/nativescript-indexed-repeater/package.json",
+            "main": "packages/nativescript-indexed-repeater/index.d.ts",
+            "assets": [
+              "packages/nativescript-indexed-repeater/*.md",
+              "packages/nativescript-indexed-repeater/index.d.ts",
+              "LICENSE",
+              {
+                "glob": "**/*",
+                "input": "packages/nativescript-indexed-repeater/platforms/",
+                "output": "./platforms/"
+              }
+            ]
+          }
+        },
+        "build.all": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": ["nx run nativescript-indexed-repeater:build", "node tools/scripts/build-finish.ts nativescript-indexed-repeater"],
+            "parallel": false
+          }
+        },
+        "focus": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-indexed-repeater"],
+            "parallel": false
+          }
+        }
+      }
     }
   },
   "cli": {

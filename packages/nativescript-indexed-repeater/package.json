@@ -1,0 +1,35 @@
+{
+  "name": "@rgbvision/nativescript-indexed-repeater",
+  "version": "1.0.0",
+  "description": "Add a plugin description",
+  "main": "index",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "ios": "6.0.0",
+      "android": "6.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RGBvision/nativescript-components.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "TypeScript",
+    "iOS",
+    "Android"
+  ],
+  "author": {
+    "name": "RGBvision",
+    "email": "contact@rgbvision.net"
+  },
+  "bugs": {
+    "url": "https://github.com/RGBvision/nativescript-components/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/RGBvision/nativescript-components",
+  "readmeFilename": "README.md",
+  "bootstrapper": "@nativescript/plugin-seed"
+}

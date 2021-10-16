@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:ir="@rgbvision/nativescript-indexed-repeater" navigatingTo="navigatingTo" class="page">
+  <Page.actionBar>
+    <ActionBar title="nativescript-indexed-repeater" icon="" class="action-bar">
+    </ActionBar>
+  </Page.actionBar>
+  <StackLayout class="p-20">
+    <ScrollView class="h-full">
+      <StackLayout>
+        <ir:IndexedRepeater items="{{ items }}">
+          <ir:IndexedRepeater.itemsLayout>
+            <StackLayout orientation="vertical"/>
+          </ir:IndexedRepeater.itemsLayout>
+          <ir:IndexedRepeater.itemTemplate>
+            <Label text="{{ title }}" margin="10" tap="onItemTap"/>
+          </ir:IndexedRepeater.itemTemplate>
+        </ir:IndexedRepeater>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</Page>
