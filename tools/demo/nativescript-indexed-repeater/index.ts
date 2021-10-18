@@ -1,5 +1,5 @@
 import { DemoSharedBase } from '../utils';
-import { ItemEventData, ObservableArray } from '@nativescript/core';
+import { ObservableArray } from '@nativescript/core';
 
 export class DemoSharedNativescriptIndexedRepeater extends DemoSharedBase {
   items: ObservableArray<any>;

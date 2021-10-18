@@ -1,7 +1,7 @@
 {
   "name": "@rgbvision/nativescript-indexed-repeater",
-  "version": "1.0.0",
-  "description": "Add a plugin description",
+  "version": "1.0.1",
+  "description": "Adds the ability to get the index of an item for a Repeater UI component",
   "main": "index",
   "typings": "index.d.ts",
   "nativescript": {

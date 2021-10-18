@@ -1,6 +1,6 @@
 # @rgbvision/nativescript-indexed-repeater
 
-Adds the ability to get the index of an item for a repeater.
+Adds the ability to get the index of an item for a Repeater UI component.
 
 Can be used in `itemTemplateSelector` or in item's event handler.
 
@@ -32,3 +32,7 @@ export function onItemTap(event: ItemEventData) {
   console.log(`Item index: ${itemData.index}`);
 }
 ```
+
+## Warning
+
+Plugin overrides `bindingContext.index` value.

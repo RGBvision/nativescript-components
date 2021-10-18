@@ -1,6 +1,6 @@
 import { Repeater, ItemsSource } from '@nativescript/core/ui/repeater';
 
-export class IndexedRepeaterCommon extends Repeater {
+export class IndexedRepeater extends Repeater {
   constructor() {
     super();
   }
